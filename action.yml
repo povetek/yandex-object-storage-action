@@ -1,0 +1,29 @@
+name: 'Yandex Object Storage Action'
+description: 'Deploy files to Yandex Object Storage'
+author: 'Povetek'
+
+runs:
+  using: 'node16'
+  main: 'build/index.js'
+
+inputs:
+  access-key-id:
+    description: 'Service account access key id'
+    required: true
+  secret-access-key:
+    description: 'Service account secret access key'
+    required: true
+  bucket:
+    description: 'Bucket name'
+    required: true
+  path:
+    description: 'Path to upload folder'
+    required: true
+  clear:
+    description: 'Clear bucket before deploy'
+    default: 'false'
+    required: false
+
+branding:
+  icon: 'folder'
+  color: 'gray-dark'
